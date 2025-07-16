@@ -20,7 +20,7 @@ export default function MyNavbar() {
         <Navbar.Brand as={Link} to="/HomePage" className="change-color d-flex align-items-center">
   <img
     // src="../public/image_slider/icons8-coffee-maker-48.png"
-    src="../public/image_slider/coffee.jpg"
+    src="/image_slider/coffee.jpg"
     alt="Roaster Cultur Logo"
     height="40"
     className="me-2"
