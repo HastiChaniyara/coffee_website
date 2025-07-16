@@ -11,7 +11,7 @@ const FranchisePage = () => {
   return (
     <div
       className="franchise-section"
-      style={{ backgroundImage: `url(././public/image_slider/coffee-15994_1280.jpg)` }}
+      style={{ backgroundImage: `url(./image_slider/coffee-15994_1280.jpg)` }}
     >
       <div className="overlay">
         <div className="franchise-content">
