@@ -1,0 +1,533 @@
+/* Global Styles */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f3f3f3;
+}
+
+/* Sidebar Styles */
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: #362c2a;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  animation: slideInLeft 0.8s ease;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.logo {
+  font-size: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sidebar a.active {
+  background-color: #f2b849;
+  color: #362c2a;
+}
+
+.sidebar a:hover {
+  background-color: #f2b849;
+  color: #362c2a;
+}
+
+/* AdminList Styles */
+
+.admin-container {
+  padding: 20px;
+  background: #fff;
+  margin: 30px 30px 30px 260px; /* Leave space for sidebar */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  animation: fadeIn 0.8s ease;
+}
+
+.admin-title {
+  margin-bottom: 20px;
+  color: #362c2a;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th, .admin-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.admin-table th {
+  background-color: #f2b849;
+  color: #fff;
+}
+
+.admin-table tbody tr:hover {
+  background-color: #f9f9f9;
+  transition: 0.3s;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #362c2a;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #f2b849;
+}
+
+.pagination .active {
+  background-color: #f2b849;
+}
+
+/* Animations */
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* AdminList.css */
+
+.action-button {
+  padding: 6px 12px;
+  margin: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.action-button:hover {
+  transform: scale(1.1);
+}
+
+/* Edit Button */
+.action-button.edit {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.action-button.edit:hover {
+  background-color: #357ABD;
+}
+
+/* Delete Button */
+.action-button.delete {
+  background-color: #e94e4e;
+  color: white;
+}
+
+.action-button.delete:hover {
+  background-color: #c93030;
+}
+
+/* Save Button */
+.action-button.save {
+  background-color: #28a745;
+  color: white;
+}
+
+.action-button.save:hover {
+  background-color: #218838;
+}
+
+/* Cancel Button */
+.action-button.cancel {
+  background-color: #6c757d;
+  color: white;
+}
+
+.action-button.cancel:hover {
+  background-color: #5a6268;
+}
+
+
+/* add button */
+/* Add User Button */
+.add-user-container {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.add-user-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.add-user-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Modal Overlay */
+/* .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+} */
+
+/* Modal Content */
+/* .modal-content {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+  animation: slideIn 0.3s ease-in-out;
+}
+
+.modal-content input {
+  width: 100%;
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+} */
+
+/* Popup Form */
+
+.add-button {
+  padding: 10px 20px;
+  background-color: #6d4c41;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  font-weight: bold;
+}
+
+.add-button:hover {
+  background-color: #5d4037;
+  transform: scale(1.05);
+}
+
+/* Delete Button */
+.admin-table button {
+  padding: 6px 12px;
+  background-color: #ef9a9a;
+  color: #4e342e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.admin-table button:hover {
+  background-color: #e57373;
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.admin-table button:active {
+  background-color: #d32f2f;
+  transform: scale(0.95) rotate(1deg);
+  color: #fff;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0 }
+  to { transform: translateY(0); opacity: 1 }
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 34, 17, 0.7); /* dark coffee overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modal-content {
+  background: #f5f0eb; /* light latte background */
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 10px 25px rgba(85, 60, 30, 0.3);
+  border: 1px solid #d2b48c;
+  position: relative;
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+  color: #4b2e1f; /* espresso title */
+  font-size: 22px;
+  font-weight: bold;
+  border-bottom: 1px solid #c9ab88;
+  padding-bottom: 10px;
+}
+
+.modal-content input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #c2a67d;
+  border-radius: 5px;
+  background-color: #fffdf9;
+  color: #3b2a1a;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-content input:focus {
+  border-color: #a67c52;
+  outline: none;
+  background-color: #fff7ec;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.action-button {
+  border: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.action-button.save {
+  background-color: #7b4b2a; /* deep coffee */
+  color: #fff;
+}
+
+.action-button.save:hover {
+  background-color: #5c3720;
+}
+
+.action-button.cancel {
+  background-color: #d2691e; /* cinnamon */
+  color: #fff;
+}
+
+.action-button.cancel:hover {
+  background-color: #b84c0e;
+}
+
+/* Optional: Coffee bean icon on modal */
+.modal-content::before {
+  content: "☕";
+  font-size: 32px;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  color: #a0522d;
+  opacity: 0.3;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(51, 34, 17, 0.7); dark coffee overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.popup-box {
+  background: #fef9f4; /* light creamy latte */
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 10px 25px rgba(85, 60, 30, 0.3);
+  border: 1px solid #d2b48c;
+  position: relative;
+}
+
+.popup-box h3 {
+  margin-bottom: 20px;
+  color: #4b2e1f;
+  font-size: 22px;
+  font-weight: bold;
+  border-bottom: 1px solid #c9ab88;
+  padding-bottom: 10px;
+}
+
+.popup-box input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #c2a67d;
+  border-radius: 5px;
+  background-color: #fffdf9;
+  color: #3b2a1a;
+  transition: all 0.3s ease-in-out;
+}
+
+.popup-box input:focus {
+  border-color: #a67c52;
+  outline: none;
+  background-color: #fff7ec;
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.cancel-btn, .confirm-btn {
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancel-btn {
+  background-color: #d2691e;
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  background-color: #b84c0e;
+}
+
+.confirm-btn {
+  background-color: #7b4b2a;
+  color: #fff;
+}
+
+.confirm-btn:hover {
+  background-color: #5c3720;
+}
+
+/* Optional coffee icon for style */
+.popup-box::before {
+  content: "☕";
+  font-size: 32px;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  color: #a0522d;
+  opacity: 0.3;
+}

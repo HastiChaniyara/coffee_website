@@ -1,0 +1,169 @@
+.franchise-section {
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10%;
+}
+
+.franchise-content {
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.franchise-content h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.franchise-content p {
+  font-size: 16px;
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+.contact-number {
+  color: #ffd39f;
+  font-weight: bold;
+}
+
+.know-more-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 2px solid #ffd39f;
+  color: #ffd39f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.know-more-button:hover {
+  background-color: #ffd39f;
+  color: #000;
+}
+
+.franchise-stats {
+  display: flex;
+  gap: 60px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.franchise-stats div {
+  text-align: center;
+  flex: 1;
+  min-width: 80px;
+}
+
+.franchise-stats h2 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.franchise-stats p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+.delay {
+  animation-delay: 0.5s;
+}
+
+.delay-2 {
+  animation-delay: 1s;
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 1s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet responsiveness */
+@media (max-width: 992px) {
+  .franchise-section {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .overlay {
+    padding: 0 6%;
+    text-align: center;
+  }
+
+  .franchise-content h1 {
+    font-size: 32px;
+  }
+
+  .franchise-stats {
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+  .franchise-section {
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .overlay {
+    padding: 0 5%;
+  }
+
+  .franchise-content h1 {
+    font-size: 26px;
+  }
+
+  .franchise-content p {
+    font-size: 14px;
+  }
+
+  .know-more-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .franchise-stats h2 {
+    font-size: 24px;
+  }
+
+  .franchise-stats p {
+    font-size: 14px;
+  }
+}

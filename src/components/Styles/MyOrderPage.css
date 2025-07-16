@@ -1,0 +1,140 @@
+.orders-container {
+  background: url('../assets/coffee-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  backdrop-filter: blur(3px);
+}
+
+.orders-title {
+  text-align: center;
+  font-size: 36px;
+  color: #4e342e;
+  margin-bottom: 40px;
+  animation: slideDown 0.6s ease-out;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.loading-text,
+.no-orders-text {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.order-card {
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 25px 30px;
+  animation: fadeInUp 0.6s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.order-info p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #3e2723;
+}
+
+.order-products {
+  margin-top: 18px;
+}
+
+.order-products h4 {
+  margin-bottom: 10px;
+  color: #5d4037;
+  font-size: 18px;
+}
+
+.order-products ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #4e342e;
+}
+
+.order-products li {
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .orders-container {
+    padding: 40px 16px;
+  }
+
+  .orders-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .order-card {
+    padding: 20px;
+  }
+
+  .order-info p,
+  .order-products li {
+    font-size: 14px;
+  }
+
+  .order-products h4 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .orders-title {
+    font-size: 24px;
+  }
+
+  .order-info p,
+  .order-products li {
+    font-size: 13px;
+  }
+
+  .orders-list {
+    gap: 20px;
+  }
+
+  .order-card {
+    padding: 18px;
+  }
+}

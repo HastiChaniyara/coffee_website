@@ -1,0 +1,223 @@
+.menu-container {
+  padding: 50px 30px;
+  background: #fff9f4;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.menu-title {
+  font-size: 36px;
+  color: #6b4226;
+  margin-bottom: 10px;
+  animation: fadeInDown 0.6s ease;
+}
+
+.menu-subtitle {
+  color: #5e5e5e;
+  margin-bottom: 40px;
+  font-size: 18px;
+  animation: fadeIn 1s ease;
+}
+
+.menu-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.slider-btn {
+  background: #6b4226;
+  border: none;
+  color: white;
+  font-size: 28px;
+  padding: 8px 14px;
+  margin: 0 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.slider-btn:hover {
+  background: #4a2e1a;
+}
+
+.menu-items {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-card {
+  width: 220px;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.menu-card:hover {
+  transform: scale(1.05);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+}
+
+/* Popup modal styles */
+.popup-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  width: 350px;
+  position: relative;
+  animation: slideInUp 0.4s ease;
+}
+
+.popup-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #555;
+}
+
+.popup-price {
+  font-size: 22px;
+  color: #6b4226;
+  margin: 10px 0;
+}
+
+.add-btn {
+  padding: 10px 20px;
+  background: #6b4226;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-btn:hover {
+  background: #4a2e1a;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .menu-card {
+    width: 180px;
+    height: 240px;
+  }
+
+  .menu-title {
+    font-size: 30px;
+  }
+
+  .popup-content {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-slider {
+    flex-direction: column;
+  }
+
+  .slider-btn {
+    margin: 10px 0;
+  }
+
+  .menu-title {
+    font-size: 26px;
+  }
+
+  .menu-subtitle {
+    font-size: 16px;
+  }
+
+  .menu-card {
+    width: 160px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-title {
+    font-size: 22px;
+  }
+
+  .menu-subtitle {
+    font-size: 14px;
+  }
+
+  .menu-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .menu-overlay h3 {
+    font-size: 16px;
+  }
+
+  .popup-price {
+    font-size: 18px;
+  }
+
+  .add-btn {
+    font-size: 14px;
+  }
+}

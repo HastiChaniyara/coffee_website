@@ -1,0 +1,117 @@
+/* Base Video Banner Styles */
+.video-banner-container {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInOverlay 1.2s ease-in;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.video-title {
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 10px;
+  animation: slideDown 1s ease-out;
+}
+
+.video-subtitle {
+  color: #ddd;
+  font-size: 18px;
+  animation: fadeInUp 1.4s ease-out;
+}
+
+/* Animations */
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* 💻 Laptop/Desktop */
+@media screen and (min-width: 1025px) {
+  .video-banner-container {
+    height: 500px;
+  }
+
+  .video-title {
+    font-size: 48px;
+  }
+
+  .video-subtitle {
+    font-size: 20px;
+  }
+}
+
+/* 📱 Phones */
+@media screen and (max-width: 600px) {
+  .video-banner-container {
+    height: 300px;
+  }
+
+  .video-title {
+    font-size: 26px;
+  }
+
+  .video-subtitle {
+    font-size: 14px;
+  }
+}
+
+/* 📱 Small Tablets & Landscape Phones */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .video-banner-container {
+    height: 350px;
+  }
+
+  .video-title {
+    font-size: 32px;
+  }
+
+  .video-subtitle {
+    font-size: 16px;
+  }
+}
+
+/* 💻 Medium Tablets and Small Laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .video-banner-container {
+    height: 400px;
+  }
+
+  .video-title {
+    font-size: 38px;
+  }
+
+  .video-subtitle {
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,158 @@
+.contact-section {
+  background-color: #f4f4f4;
+  padding: 60px 30px;
+  font-family: "Segoe UI", sans-serif;
+  animation: fadeIn 1.2s ease-in;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 32px;
+  color: #222;
+  margin-bottom: 8px;
+  animation: slideDown 0.7s ease-in-out;
+}
+
+.underline {
+  width: 60px;
+  height: 4px;
+  background-color: #a1845c;
+  margin: 0 auto 20px auto;
+}
+
+.contact-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  animation: fadeIn 1.2s ease-in;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.contact-info .email {
+  color: #a1845c;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeInRight 1s ease;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.send-button {
+  width: 100px;
+  padding: 10px;
+  background-color: #a1845c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: #8a6d47;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInRight {
+  from { transform: translateX(40px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .contact-section {
+    padding: 50px 20px;
+  }
+
+  .contact-form,
+  .contact-info {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .send-button {
+    width: 100%;
+    align-self: stretch;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-title {
+    font-size: 26px;
+  }
+
+  .contact-subtitle {
+    font-size: 16px;
+  }
+
+  .form-row input,
+  textarea {
+    font-size: 13px;
+  }
+}

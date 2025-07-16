@@ -1,0 +1,155 @@
+.product-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  background-color: #f4f1ec;
+  min-height: 100vh;
+}
+
+.list-title {
+  text-align: center;
+  color: #5b3c2b;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  animation: slideUp 0.7s ease-in-out;
+  margin: 10px 10px 30px 220px;
+}
+
+.product-table th,
+.product-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.product-table th {
+  background-color: #e8ded2;
+  color: #3b2b23;
+  font-weight: 600;
+}
+
+.product-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.product-img:hover {
+  transform: scale(1.05);
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 6px 14px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #ffcc70;
+  color: #3b2b23;
+}
+
+.edit-btn:hover {
+  background-color: #ffc14d;
+}
+
+.delete-btn {
+  background-color: #f16c6c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #e94e4e;
+}
+
+.no-data {
+  text-align: center;
+  padding: 30px;
+  font-size: 16px;
+  color: #777;
+}
+
+.modal-backdrop {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.modal h3 {
+  margin-bottom: 15px;
+}
+
+.modal input,
+.modal textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-buttons button {
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

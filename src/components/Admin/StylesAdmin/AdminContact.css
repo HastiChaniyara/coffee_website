@@ -1,0 +1,50 @@
+.admin-contact-panel {
+  padding: 20px;
+  max-width: 95%;
+  margin: auto;
+  margin-left: 220px;
+}
+
+.admin-contact-panel h2 {
+  color: #6f4e37;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fffaf5;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #e5d7c0;
+  text-align: left;
+}
+
+th {
+  background: #f4e9d8;
+  font-weight: 600;
+}
+
+button {
+  margin: 0 4px;
+  padding: 6px 8px;
+  border: none;
+  background-color: #6f4e37;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5a3b2a;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #cdb79e;
+  border-radius: 5px;
+}

@@ -1,0 +1,159 @@
+.login-container {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 2s ease-in-out;
+  padding: 20px;
+}
+
+.login-box {
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 360px;
+  animation: slideUp 1s ease-in-out;
+}
+
+.login-title {
+  font-family: 'Segoe UI', sans-serif;
+  color: #5e3a2c;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-input {
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+.login-input:focus {
+  border-color: #a97456;
+  outline: none;
+}
+
+.login-button {
+  padding: 12px;
+  background-color: #a97456;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #804c31;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 15px;
+}
+
+.login-link-button {
+  background: none;
+  border: none;
+  color: #a97456;
+  text-decoration: underline;
+  font-size: 15px;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin-left: 6px;
+}
+
+.login-link-button:hover {
+  color: #5e3a2c;
+}
+
+.login-message {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-box {
+    padding: 30px 20px;
+    max-width: 300px;
+  }
+
+  .login-title {
+    font-size: 20px;
+  }
+
+  .login-input {
+    font-size: 14px;
+  }
+
+  .login-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .login-link-button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 15px;
+  }
+
+  .login-box {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .login-title {
+    font-size: 18px;
+  }
+
+  .login-button {
+    font-size: 13px;
+  }
+
+  .login-link-button {
+    font-size: 13px;
+  }
+
+  .login-message {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,135 @@
+/* RegisterPage.css */
+
+.register-container {
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.register-box {
+  background-color: rgba(255, 255, 255, 0.93);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  width: 100%;
+  max-width: 400px;
+  animation: slideIn 1s ease-out;
+  box-sizing: border-box;
+}
+
+.register-title {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 24px;
+  color: #4e342e;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-input {
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border 0.3s ease;
+}
+
+.register-input:focus {
+  border-color: #a97456;
+  outline: none;
+}
+
+.register-button {
+  padding: 12px;
+  background-color: #a97456;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #6d4031;
+}
+
+.login-link-button {
+  background: none;
+  border: none;
+  color: #a97456;
+  text-decoration: underline;
+  font-size: 15px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.login-link-button:hover {
+  color: #6d4031;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
+  .register-box {
+    padding: 30px 20px;
+  }
+
+  .register-title {
+    font-size: 20px;
+  }
+
+  .register-button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-box {
+    width: 100%;
+    padding: 24px 16px;
+  }
+
+  .register-title {
+    font-size: 18px;
+  }
+
+  .register-input {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .register-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .login-link-button {
+    font-size: 14px;
+  }
+}

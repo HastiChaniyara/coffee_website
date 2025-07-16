@@ -1,0 +1,84 @@
+
+.main-content {
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fefcf9;
+}
+
+.dashboard-title {
+  font-size: 32px;
+  color: #5a3e36;
+  margin-bottom: 25px;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  flex: 1 1 30%;
+  background: #fff;
+  color: #3e2c27;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #4b2e2e;
+}
+
+.stat-card p {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Coffee-themed backgrounds */
+.coffee {
+  background: linear-gradient(135deg, #d7ccc8, #a1887f);
+  color: #3e2723;
+}
+
+.mocha {
+  background: linear-gradient(135deg, #bcaaa4, #8d6e63);
+  color: #4e342e;
+}
+
+.latte {
+  background: linear-gradient(135deg, #ffe0b2, #ffcc80);
+  color: #6d4c41;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+

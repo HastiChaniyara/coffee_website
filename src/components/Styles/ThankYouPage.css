@@ -1,0 +1,121 @@
+/* ThankYouPage.css */
+
+/* Container */
+/* .thankyou-container {
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+} */
+.thankyou-container {
+  background-size: cover;         /* Ensures the image always covers the container */
+  background-position: center;    /* Keeps the image centered */
+  min-height: 100vh;              /* Makes the section full height of screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;                  /* Adds spacing on smaller screens */
+}
+
+/* Box */
+.thankyou-box {
+  background-color: rgba(255, 255, 255, 0.93);
+  padding: 50px 40px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.8s ease;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Title */
+.thankyou-box h1 {
+  font-size: 32px;
+  color: #4CAF50;
+  margin-bottom: 16px;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Subtitle */
+.thankyou-box p {
+  font-size: 18px;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+/* Button */
+.home-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #6f4e37; /* coffee brown */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.home-btn:hover {
+  background-color: #5a3c2c;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .thankyou-box {
+    padding: 30px 25px;
+  }
+
+  .thankyou-box h1 {
+    font-size: 26px;
+  }
+
+  .thankyou-box p {
+    font-size: 16px;
+  }
+
+  .home-btn {
+    font-size: 15px;
+    padding: 10px 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .thankyou-box {
+    padding: 25px 20px;
+  }
+
+  .thankyou-box h1 {
+    font-size: 22px;
+  }
+
+  .thankyou-box p {
+    font-size: 15px;
+  }
+
+  .home-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
