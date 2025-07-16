@@ -34,10 +34,10 @@ const RegisterPage = () => {
       const res = await axios.post('https://coffee-website-83vf.onrender.com/api/auth/register', data);
       setMessage(res.data.message);
       console.log("successful")
+      navigate('/login');
     } catch (err) {
       setMessage(err.response?.data?.message || 'Error occurred');
     }
-    navigate('/login');
   };
 
   const handleLoginClick = () => {
