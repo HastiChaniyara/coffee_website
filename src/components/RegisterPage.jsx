@@ -31,7 +31,7 @@ const RegisterPage = () => {
     password: form.password
   };
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/register', data);
+      const res = await axios.post('http://coffee-website-83vf.onrender.com/api/auth/register', data);
       setMessage(res.data.message);
       console.log("successful")
     } catch (err) {

@@ -10,7 +10,7 @@ const AdminOutletList = () => {
   const [showForm, setShowForm] = useState(false);
 
   const fetchOutlets = async () => {
-    const res = await axios.get('http://localhost:5000/api/outlets');
+    const res = await axios.get('http://coffee-website-83vf.onrender.com/api/outlets');
     setOutlets(res.data);
   };
 
@@ -19,7 +19,7 @@ const AdminOutletList = () => {
   }, []);
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/api/outlets/${id}`);
+    await axios.delete(`http://coffee-website-83vf.onrender.com/api/outlets/${id}`);
     fetchOutlets();
   };
 

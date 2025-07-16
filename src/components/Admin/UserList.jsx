@@ -260,7 +260,7 @@ const UserList = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/auth/users');
+      const res = await axios.get('http://coffee-website-83vf.onrender.com/api/auth/users');
       setUsers(res.data);
       setLoading(false);
     } catch (error) {
@@ -272,7 +272,7 @@ const UserList = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this user?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/auth/users/${id}`);
+        await axios.delete(`http://coffee-website-83vf.onrender.com/api/auth/users/${id}`);
         fetchUsers();
       } catch (err) {
         console.error("Error deleting user:", err);
@@ -296,7 +296,7 @@ const UserList = () => {
     }
 
     try {
-      await axios.put(`http://localhost:5000/api/auth/users/${editUser}`, editForm);
+      await axios.put(`http://coffee-website-83vf.onrender.com/api/auth/users/${editUser}`, editForm);
       fetchUsers();
       setEditUser(null);
     } catch (err) {
@@ -324,7 +324,7 @@ const UserList = () => {
     const payload = { name, email, password };
 
     try {
-      await axios.post('http://localhost:5000/api/auth/register', payload);
+      await axios.post('http://coffee-website-83vf.onrender.com/api/auth/register', payload);
       fetchUsers();
       setShowAddForm(false);
       setNewUser({ name: '', email: '', password: '', confirmPassword: '' });

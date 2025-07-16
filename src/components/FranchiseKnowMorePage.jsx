@@ -68,7 +68,7 @@ const OutletsPage = () => {
   const [outlets, setOutlets] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/outlets")
+    axios.get("http://coffee-website-83vf.onrender.com/api/outlets")
       .then(res => setOutlets(res.data))
       .catch(err => console.error(err));
   }, []);

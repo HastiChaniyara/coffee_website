@@ -26,7 +26,7 @@ const [editAdminId, setEditAdminId] = useState(null);
 
   const fetchAdmins = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/admins');
+      const response = await axios.get('http://coffee-website-83vf.onrender.com/api/admins');
       setAdmins(response.data);
     } catch (error) {
       console.error('Failed to fetch admins:', error);
@@ -48,7 +48,7 @@ const [editAdminId, setEditAdminId] = useState(null);
 
   const handleAddAdmin = async () => {
     try {
-      await axios.post('http://localhost:5000/api/admins', newAdmin);
+      await axios.post('http://coffee-website-83vf.onrender.com/api/admins', newAdmin);
       setNewAdmin({ name: '', email: '', password: '' });
       setShowPopup(false);
       fetchAdmins();
@@ -59,7 +59,7 @@ const [editAdminId, setEditAdminId] = useState(null);
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/admins/${id}`);
+      await axios.delete(`http://coffee-website-83vf.onrender.com/api/admins/${id}`);
       fetchAdmins();
     } catch (error) {
       console.error('Delete error:', error);
@@ -75,7 +75,7 @@ const [editAdminId, setEditAdminId] = useState(null);
 
 const handleUpdateAdmin = async () => {
   try {
-    await axios.put(`http://localhost:5000/api/admins/${editAdminId}`, newAdmin);
+    await axios.put(`http://coffee-website-83vf.onrender.com/api/admins/${editAdminId}`, newAdmin);
     setNewAdmin({ name: '', email: '', password: '' });
     setEditMode(false);
     setShowPopup(false);

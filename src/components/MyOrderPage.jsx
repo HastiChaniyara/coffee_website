@@ -14,7 +14,7 @@ const userId = storedUser?._id; // ✅ FIXED: because your _id is top-level
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/orders');
+        const res = await axios.get('http://coffee-website-83vf.onrender.com/api/orders');
 const userOrders = res.data.filter(order => {
   if (typeof order.user === 'string') return order.user === userId;
   if (typeof order.user === 'object' && order.user._id) return order.user._id === userId;

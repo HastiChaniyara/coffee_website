@@ -42,7 +42,7 @@ const AdminProductPage = () => {
     formData.append("image", product.image);
 
     try {
-      const res = await fetch("http://localhost:5000/api/products/add", {
+      const res = await fetch("http://coffee-website-83vf.onrender.com/api/products/add", {
         method: "POST",
         body: formData,
       });

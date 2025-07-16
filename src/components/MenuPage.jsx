@@ -12,7 +12,7 @@ const MenuPage = () => {
   const itemsPerPage = 3;
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/products')
+    axios.get('http://coffee-website-83vf.onrender.com/api/products')
       .then((res) => setMenuItems(res.data))
       .catch((err) => console.error("Failed to fetch menu items:", err));
   }, []);
