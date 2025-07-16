@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./styles/FranchiseKnowMorePage.css";
+import "./Styles/FranchiseKnowMorePage.css";
 import VideoBanner from "./VideoBanner";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
