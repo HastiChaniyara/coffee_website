@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import './Styles/ImageSlider.css';
 
 const images = [
-  './image_slider/pexels-apgpotr-683039.jpg',
-  './public/image_slider/pexels-fotios-photos-1995010.jpg',
-  './public/image_slider/pexels-quang-nguyen-vinh-222549-2159106.jpg',
-  './public/image_slider/pexels-lood-goosen-508841-1235717.jpg',
+  '/image_slider/pexels-apgpotr-683039.jpg',
+  '/image_slider/pexels-fotios-photos-1995010.jpg',
+  '/image_slider/pexels-quang-nguyen-vinh-222549-2159106.jpg',
+  '/image_slider/pexels-lood-goosen-508841-1235717.jpg',
 ];
+
 
 export default function ImageSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
