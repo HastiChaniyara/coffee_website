@@ -15,7 +15,11 @@ dotenv.config();
 const mongoURI = process.env.MONGO_URI;
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: 'https://your-netlify-site.netlify.app'
+}));
+
 app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use("/uploads", express.static("uploads")); 
