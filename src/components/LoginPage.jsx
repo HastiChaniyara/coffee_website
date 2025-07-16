@@ -27,7 +27,7 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container" style={{ backgroundImage: `url(././public/image_slider/ante-samarzija-lsmu0rUhUOk-unsplash.jpg)` }}>
+    <div className="login-container" style={{ backgroundImage: `url(/image_slider/ante-samarzija-lsmu0rUhUOk-unsplash.jpg)` }}>
       <div className="login-box">
         <h2 className="login-title">Welcome to CoffeeHub ☕</h2>
         <form onSubmit={handleSubmit} className="login-form">
