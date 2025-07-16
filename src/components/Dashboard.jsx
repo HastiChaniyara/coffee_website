@@ -19,7 +19,7 @@ const Dashboard = () => {
     const itemsPerPage = 3;
 
     useEffect(() => {
-    axios.get('http://coffee-website-83vf.onrender.com/api/products')
+    axios.get('https://coffee-website-83vf.onrender.com/api/products')
       .then((res) => setMenuItems(res.data))
       .catch((err) => console.error("Failed to fetch menu items:", err));
   }, []);
@@ -53,7 +53,7 @@ const Dashboard = () => {
    const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://coffee-website-83vf.onrender.com/api/contact', formData);
+      await axios.post('https://coffee-website-83vf.onrender.com/api/contact', formData);
       alert('Message sent successfully!');
       setFormData({ name: '', subject: '', email: '', phone: '', message: '' });
     } catch (err) {
@@ -129,7 +129,7 @@ const Dashboard = () => {
           <div className="menu-items">
             {menuItems.slice(startIndex, startIndex + itemsPerPage).map((item, index) => (
               <div className="menu-card" key={index} onClick={() => setSelectedItem(item)}>
-                <img src={`http://coffee-website-83vf.onrender.com/${item.imageUrl}`} alt={item.name} />
+                <img src={`https://coffee-website-83vf.onrender.com/${item.imageUrl}`} alt={item.name} />
                 <div className="menu-overlay">
                   <h3>{item.name}</h3>
                 </div>
@@ -145,7 +145,7 @@ const Dashboard = () => {
         <div className="popup-modal">
           <div className="popup-content">
             <span className="popup-close" onClick={() => setSelectedItem(null)}>&times;</span>
-            <img src={`http://coffee-website-83vf.onrender.com/${selectedItem.imageUrl}`} alt={selectedItem.name} className="popup-img" />
+            <img src={`https://coffee-website-83vf.onrender.com/${selectedItem.imageUrl}`} alt={selectedItem.name} className="popup-img" />
             <h2>{selectedItem.name}</h2>
             <p>{selectedItem.description}</p>
             <p className="popup-price">₹{selectedItem.price}</p>

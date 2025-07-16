@@ -14,7 +14,7 @@ const AdminProductList = () => {
 
   const fetchProducts = () => {
     axios
-      .get("http://coffee-website-83vf.onrender.com/api/products")
+      .get("https://coffee-website-83vf.onrender.com/api/products")
       .then((res) => {
         setProducts(res.data);
       })
@@ -27,7 +27,7 @@ const AdminProductList = () => {
     const confirmed = window.confirm("Are you sure you want to delete this product?");
     if (confirmed) {
       axios
-        .delete(`http://coffee-website-83vf.onrender.com/api/products/${id}`)
+        .delete(`https://coffee-website-83vf.onrender.com/api/products/${id}`)
         .then(() => {
           setProducts((prev) => prev.filter((p) => p._id !== id));
         })
@@ -70,7 +70,7 @@ const handleEditSubmit = async (e) => {
     }
 
     await axios.put(
-      `http://coffee-website-83vf.onrender.com/api/products/${editingProduct._id}`,
+      `https://coffee-website-83vf.onrender.com/api/products/${editingProduct._id}`,
       formData,
       {
         headers: {
@@ -111,7 +111,7 @@ const handleEditSubmit = async (e) => {
                   <td>{index + 1}</td>
                   <td>
                     <img
-                      src={`http://coffee-website-83vf.onrender.com/${product.imageUrl}`}
+                      src={`https://coffee-website-83vf.onrender.com/${product.imageUrl}`}
                       alt={product.name}
                       className="product-img"
                     />

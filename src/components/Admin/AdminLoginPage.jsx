@@ -17,7 +17,7 @@ const Login = ({ setAdmin }) => {
     console.log("📤 Sending login data:", { email: trimmedEmail, password: trimmedPassword });
 
     try {
-      const res = await axios.post('http://coffee-website-83vf.onrender.com/api/admins/login', {
+      const res = await axios.post('https://coffee-website-83vf.onrender.com/api/admins/login', {
         email: trimmedEmail,
         password: trimmedPassword
       });

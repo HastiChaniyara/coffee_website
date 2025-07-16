@@ -37,7 +37,7 @@ const PlaceOrderPage = ({ cartItems }) => {
       };
       console.log("Sending orderData:", orderData);
 
-      await axios.post('http://coffee-website-83vf.onrender.com/api/orders', orderData);
+      await axios.post('https://coffee-website-83vf.onrender.com/api/orders', orderData);
 
       alert('Order placed!');
       localStorage.removeItem('cart');

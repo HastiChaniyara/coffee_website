@@ -28,9 +28,9 @@ const AdminOutletForm = ({ onSave, editData }) => {
 
     try {
       if (editData) {
-        await axios.put(`http://coffee-website-83vf.onrender.com/api/outlets/${editData._id}`, outlet);
+        await axios.put(`https://coffee-website-83vf.onrender.com/api/outlets/${editData._id}`, outlet);
       } else {
-        await axios.post('http://coffee-website-83vf.onrender.com/api/outlets', outlet);
+        await axios.post('https://coffee-website-83vf.onrender.com/api/outlets', outlet);
       }
       onSave(); // refresh list + close modal
     } catch (err) {

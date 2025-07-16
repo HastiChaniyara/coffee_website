@@ -8,7 +8,7 @@ const AdminContactList = () => {
   const [editing, setEditing] = useState(null);
 
   const fetchMessages = async () => {
-    const res = await axios.get('http://coffee-website-83vf.onrender.com/api/contact-messages');
+    const res = await axios.get('https://coffee-website-83vf.onrender.com/api/contact-messages');
     setMessages(res.data);
   };
 
@@ -18,7 +18,7 @@ const AdminContactList = () => {
 
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure to delete?')) {
-      await axios.delete(`http://coffee-website-83vf.onrender.com/api/contact-messages/${id}`);
+      await axios.delete(`https://coffee-website-83vf.onrender.com/api/contact-messages/${id}`);
       fetchMessages();
     }
   };
@@ -32,7 +32,7 @@ const AdminContactList = () => {
   };
 
   const handleUpdate = async () => {
-    await axios.put(`http://coffee-website-83vf.onrender.com/api/contact-messages/${editing._id}`, editing);
+    await axios.put(`https://coffee-website-83vf.onrender.com/api/contact-messages/${editing._id}`, editing);
     setEditing(null);
     fetchMessages();
   };

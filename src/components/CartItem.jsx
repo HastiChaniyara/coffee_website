@@ -6,7 +6,7 @@ const CartItem = ({ item, onQuantityChange, onRemove }) => {
     <div className="cart-row fade-in">
       {/* <img src={item.image} alt={item.name} className="cart-image" /> */}
       <img className="cart-image"
-  src={item.image ? item.image : `http://coffee-website-83vf.onrender.com/${item.imageUrl}`}
+  src={item.image ? item.image : `https://coffee-website-83vf.onrender.com/${item.imageUrl}`}
   alt={item.name}
 />
       <span>{item.name}</span>

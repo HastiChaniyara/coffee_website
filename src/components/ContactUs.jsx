@@ -25,7 +25,7 @@ const ContactUs = () => {
    const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://coffee-website-83vf.onrender.com/api/contact', formData);
+      await axios.post('https://coffee-website-83vf.onrender.com/api/contact', formData);
       alert('Message sent successfully!');
       setFormData({ name: '', subject: '', email: '', phone: '', message: '' });
     } catch (err) {

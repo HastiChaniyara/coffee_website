@@ -12,7 +12,7 @@ const [editableItems, setEditableItems] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://coffee-website-83vf.onrender.com0/api/orders")
+      .get("https://coffee-website-83vf.onrender.com0/api/orders")
       .then((res) => setOrders(res.data))
       .catch((err) => console.error("Failed to fetch orders:", err));
   }, []);
@@ -20,7 +20,7 @@ const [editableItems, setEditableItems] = useState([]);
   const handleDelete = (id) => {
     if (window.confirm("Are you sure you want to delete this order?")) {
       axios
-        .delete(`http://coffee-website-83vf.onrender.com/api/orders/${id}`)
+        .delete(`https://coffee-website-83vf.onrender.com/api/orders/${id}`)
         .then(() => setOrders(orders.filter((order) => order._id !== id)))
         .catch((err) => console.error("Delete failed:", err));
     }
@@ -28,7 +28,7 @@ const [editableItems, setEditableItems] = useState([]);
 
   const handleUpdateOrder = async () => {
   try {
-    await axios.put(`http://coffee-website-83vf.onrender.com/api/orders/${editingOrder._id}`, {
+    await axios.put(`https://coffee-website-83vf.onrender.com/api/orders/${editingOrder._id}`, {
       address: editAddress,
       cartItems: editableItems,
     });
@@ -38,7 +38,7 @@ const [editableItems, setEditableItems] = useState([]);
     setEditableItems([]);
 
     // Refresh orders
-    const res = await axios.get("http://coffee-website-83vf.onrender.com/api/orders");
+    const res = await axios.get("https://coffee-website-83vf.onrender.com/api/orders");
     setOrders(res.data);
   } catch (err) {
     console.error("Update failed:", err);

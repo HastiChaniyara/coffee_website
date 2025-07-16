@@ -13,7 +13,7 @@ const MainContent = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const res = await axios.get('http://coffee-website-83vf.onrender.com/api/admin/dashboard-stats');
+        const res = await axios.get('https://coffee-website-83vf.onrender.com/api/admin/dashboard-stats');
         setStats(res.data);
       } catch (error) {
         console.error('Error fetching dashboard stats', error);
