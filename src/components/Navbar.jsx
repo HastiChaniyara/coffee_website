@@ -18,13 +18,13 @@ export default function MyNavbar() {
     <Navbar expand="lg" bg="light" variant="light" className="shadow-sm py-3 m-0 custom-navbar">
       <Container>
         <Navbar.Brand as={Link} to="/HomePage" className="change-color d-flex align-items-center">
-  <img
+  {/* <img
     src="/image_slider/coffee.jpg"
     alt="Roaster Cultur Logo"
     height="40"
     className="me-2"
     style={{ borderRadius: '50%' }} 
-  />
+  /> */}
   <span>Roaster Cultur</span>
 </Navbar.Brand>
         <Navbar.Toggle aria-controls="main-navbar" />
